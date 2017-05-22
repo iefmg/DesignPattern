@@ -1,0 +1,19 @@
+@startuml
+
+class Creator{
+    create(): Iproduct
+}
+interface IProduct{
+    method();
+}
+class ProductA implements IProduct{
+    method();
+}
+class ProductB implements IProduct{
+    method();
+}
+
+Creator --> ProductA : create
+Creator --> ProductB : create
+
+@enduml

@@ -1,0 +1,23 @@
+@startuml
+
+interface Factory
+
+class FactoryA implements Factory
+class FactoryB implements Factory
+
+interface Product1
+interface Product2
+
+class Product1_A implements Product1
+class Product1_B implements Product1
+
+class Product2_A implements Product2
+class Product2_B implements Product2
+
+FactoryA --> Product1_A :create
+FactoryA --> Product2_A :create
+
+FactoryB --> Product1_B :create
+FactoryB --> Product2_B :create
+
+@enduml

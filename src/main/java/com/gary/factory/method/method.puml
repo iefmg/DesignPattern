@@ -1,0 +1,35 @@
+@startuml
+
+class Client{
+}
+
+interface Creator{
+    createLight() : Light
+}
+class BulbCreator implements Creator{
+    createLight() : BulbLight
+}
+class TubeCreator implements Creator{
+    createLight() : TubeLight
+}
+
+interface Light{
+    turnon() : void
+    turnoff() : void
+}
+class BulbLight implements Light{
+    turnon() : void
+    turnoff() : void
+}
+class TubeLight implements Light{
+    turnon() : void
+    turnoff() : void
+}
+
+Client ..> Light
+Client ..> Creator
+Creator --> Light : create
+BulbCreator --> BulbLight : create
+TubeCreator --> TubeLight : create
+
+@enduml

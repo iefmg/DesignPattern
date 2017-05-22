@@ -1,0 +1,24 @@
+@startuml
+
+interface Observe{
+    update(Observable observable, Object[] args): void
+}
+
+class ConcreteObserveA implements Observe{
+    update(Observable observable, Object[] args): void
+}
+class ConcreteObserveB implements Observe{
+    update(Observable observable, Object[] args): void
+}
+
+class Observable{
+    addObserve(Observe) : void
+    deleteObserve(Observe) : void
+    notifyAllObserve(Object[] args) : void
+}
+
+Observable "1"..>"*" ConcreteObserveA
+Observable "1"..>"*" ConcreteObserveB
+Observe "1"..>"*" Observable
+
+@enduml
