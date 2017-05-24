@@ -1,4 +1,4 @@
-package com.gary.Singleton;
+package com.gary.singleton;
 
 import java.lang.reflect.Method;
 import java.util.Collections;

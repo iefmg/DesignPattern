@@ -1,4 +1,4 @@
-package com.gary.Singleton;
+package com.gary.singleton;
 
 /**
  * @author gefengming
